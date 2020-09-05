@@ -28,7 +28,11 @@ const SLIDES = [
     }
 ];
 
-ReactDOM.render(<App slides={SLIDES} />, document.getElementById('root'));
+ReactDOM.render(
+    <App slides={SLIDES} />,
+    document.getElementById('root')
+);
+
 registerServiceWorker();
 
 applyPolyfills().then(() => {

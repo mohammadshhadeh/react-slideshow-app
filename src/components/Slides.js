@@ -4,6 +4,7 @@ export default class Slides extends Component {
     render() {
         const item = this.props.slides[this.props.index];
         const index = this.props.index;
+
         return (
             <div>
                 <div id="navigation" className="text-center">
