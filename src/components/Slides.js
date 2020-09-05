@@ -7,7 +7,12 @@ export default class Slides extends Component {
         return (
             <div>
                 <div id="navigation" className="text-center">
-                    <button data-testid="button-restart" onClick={this.props.resetSlides} className="small outlined">
+                    <button
+                        data-testid="button-restart"
+                        onClick={this.props.resetSlides}
+                        className="small outlined"
+                        disabled={index === 0}
+                    >
                         Restart
                     </button>
                     <button
@@ -19,10 +24,10 @@ export default class Slides extends Component {
                         Prev
                     </button>
                     <button
+                        data-testid="button-next"
                         onClick={this.props.nextSlide}
                         disabled={index === this.props.slides.length - 1}
                         className="small"
-                        data-testid="button-next"
                     >
                         Next
                     </button>
